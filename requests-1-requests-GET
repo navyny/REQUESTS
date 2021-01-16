@@ -1,4 +1,4 @@
-#basic requests call:
+#basic requests-GET call:
 
 import requests
 URL="https://www.google.com"
