@@ -1,0 +1,24 @@
+#--------------------USING POST-----------------------------
+
+import requests
+payload = {'key1': 'value1', 'key2': 'value2'}
+r = requests.post("https://httpbin.org/post", data=payload)
+print(r.text)
+
+
+
+
+#---------------POST HELP--------------------
+>>> help(requests.post)
+Help on function post in module requests.api:
+
+post(url, data=None, json=None, **kwargs)
+    Sends a POST request.
+    
+    :param url: URL for the new :class:`Request` object.
+    :param data: (optional) Dictionary, list of tuples, bytes, or file-like
+        object to send in the body of the :class:`Request`.
+    :param json: (optional) json data to send in the body of the :class:`Request`.
+    :param \*\*kwargs: Optional arguments that ``request`` takes.
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
