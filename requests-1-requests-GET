@@ -1,6 +1,31 @@
-#basic requests-GET call:
+#-----------------basic requests-GET call:
 
 import requests
 URL="https://www.google.com"
 r=requests.get(URL)
 print(r.status_code)
+print(r.text)    #to read the response content
+
+
+#------------TO PASS PARAMETERS TO A URL-------------------
+'''
+payload = {'key1': 'value1', 'key2': 'value2'}
+r = requests.get('https://httpbin.org/get', params=payload)
+print(r.url)
+'''
+
+'''
+#-----------HELP FILE---------------
+>>> help(requests.get)
+Help on function get in module requests.api:
+
+get(url, params=None, **kwargs)
+    Sends a GET request.
+    
+    :param url: URL for the new :class:`Request` object.
+    :param params: (optional) Dictionary, list of tuples or bytes to send
+        in the body of the :class:`Request`.
+    :param \*\*kwargs: Optional arguments that ``request`` takes.
+    :return: :class:`Response <Response>` object
+    :rtype: requests.Response
+'''
